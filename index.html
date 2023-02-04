@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3d테스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="informDiv">
+        <h1>스크롤 이벤트 및 three.js테스트</h1>
+        <p>아래로 스크롤 하면 3d 오브젝트가 나옵니다</p>
+        <p>마우스로 조작가능</p>
+    </div>
+
+
+
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+              "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+        }        
+    </script>
+
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

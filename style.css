@@ -1,0 +1,24 @@
+body{
+    margin:0;
+    height: 200vh;
+}
+
+canvas{
+    z-index: 1;
+    position: fixed;
+    display: block;
+    
+}
+
+.informDiv{
+    z-index: 2;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+}
+
+.informDiv>h1{
+    margin:0;
+}
