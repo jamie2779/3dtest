@@ -30,20 +30,24 @@ import { GLTFLoader } from 'GLTFLoader';
 
         let camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
         const controls = new OrbitControls( camera, renderer.domElement );
-        controls.enableZoom=false;
-        camera.position.set(0, 0, 5)
-
+        //controls.enableZoom=false;
+        camera.position.set(0, 500, 700)
 
         scene.background = new THREE.Color("White");
         let light = new THREE.DirectionalLight(0xffffff,10);
+        light.position.set(-1,0,1)
         scene.add(light);
 
+        let light2 = new THREE.DirectionalLight(0xffffff,10);
+        light2.position.set(1,0,1)
+        scene.add(light2);
+
         let loader = new GLTFLoader();
-        loader.load('./models/killerwhale/scene.gltf', function (gltf) {
+        loader.load('./models/rubber_duck/scene.gltf', function (gltf) {
             scene.add(gltf.scene);
             function animate(){
                 requestAnimationFrame(animate)
-                gltf.scene.rotation.y += 0.01
+                //gltf.scene.rotation.y += 0.01
                 controls.update();
                 renderer.render(scene, camera);
             }
